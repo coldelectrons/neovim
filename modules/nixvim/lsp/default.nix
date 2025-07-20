@@ -155,7 +155,7 @@ in
       html.enable = true;
       jsonls.enable = true;
       ltex.enable = true;
-      lua-ls.enable = true;
+      lua_ls.enable = true;
       nginx-language-server.enable = true;
       nixd = {
         enable = true;
@@ -192,7 +192,7 @@ in
       # prismals.enable = true;
       pyright.enable = true;
 
-      rust-analyzer = {
+      rust_analyzer = {
         enable = true;
         installCargo = true;
         installRustc = true;
@@ -201,7 +201,7 @@ in
       sqls.enable = true;
       # tailwindcss.enable = true;
       # terraformls.enable = true;
-      tsserver.enable = true;
+      ts_ls.enable = true;
       # volar.enable = true;
       yamlls.enable = true;
       zls.enable = true;
