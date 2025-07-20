@@ -19,6 +19,11 @@
       url = "github:cachix/pre-commit-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    tokyodark = {
+      url = "github:tiagovla/tokyodark.nvim";
+      flake = false;
+    };
   };
 
   # TODO: a todo
