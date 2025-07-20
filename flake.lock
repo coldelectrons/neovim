@@ -247,6 +247,7 @@
         "nixvim": "nixvim",
         "pre-commit-hooks": "pre-commit-hooks",
         "snowfall-lib": "snowfall-lib",
+        "tokyodark": "tokyodark",
         "unstable": "unstable"
       }
     },
@@ -314,6 +315,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "tokyodark": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1735789280,
+        "narHash": "sha256-pEnA8s1666HYnHkpN1Xtni+W8vVy+AeUr5z7WY2RLo4=",
+        "owner": "tiagovla",
+        "repo": "tokyodark.nvim",
+        "rev": "cc70a2fb809d5376f2bd8e5836f9bb3f5fb8ef43",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tiagovla",
+        "repo": "tokyodark.nvim",
         "type": "github"
       }
     },
