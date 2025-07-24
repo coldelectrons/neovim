@@ -28,9 +28,9 @@
 
   colorschemes.tokyonight = {
     enable = true;
-    style = "night";
-    transparent = true;
     settings = {
+      style = "night";
+      transparent = true;
       borders = true;
       contrast = false;
       disable_background = false;

@@ -72,14 +72,14 @@
         };
       };
 
-      colors = with lib.plusultra.theme.nord; {
-        error = [ nord11 ];
-        warning = [ nord12 ];
-        info = [ nord15 ];
-        hint = [ nord10 ];
-        todo = [ nord6 ];
-        default = [ nord6 ];
-      };
+      # colors = with lib.plusultra.theme.nord; {
+      #   error = [ nord11 ];
+      #   warning = [ nord12 ];
+      #   info = [ nord15 ];
+      #   hint = [ nord10 ];
+      #   todo = [ nord6 ];
+      #   default = [ nord6 ];
+      # };
     };
   };
 }
