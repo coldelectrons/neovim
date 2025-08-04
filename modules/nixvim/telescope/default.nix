@@ -42,6 +42,14 @@
       fzf-native.enable = true;
       media-files.enable = true;
       ui-select.enable = true;
+      file-browser = {
+        enable = true;
+        settings = {
+          add_dirs = true;
+          grouped = true;
+          hidden = true;
+        };
+      };
     };
   };
 }

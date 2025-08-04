@@ -6,7 +6,7 @@
         "v"
       ];
       action = "<cmd>NvimTreeToggle<CR>";
-      key = "<C-n>";
+      key = "<leader>fe";
       options = {
         desc = "nvim-tree: Toggle";
         silent = true;
@@ -16,7 +16,7 @@
 
     {
       mode = "n";
-      key = "<leader>gf";
+      key = "<leader>ff";
       action = "<cmd>NvimTreeFindFile<cr>";
       options = {
         desc = "nvim-tree: Find File";

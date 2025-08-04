@@ -5,6 +5,6 @@
   ...
 }:
 pkgs.vimUtils.buildVimPlugin {
-  name = "tokyodark";
-  src = inputs.tokyodark;
+  name = "care";
+  src = inputs.care;
 }

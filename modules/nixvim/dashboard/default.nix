@@ -67,7 +67,7 @@
             icon = " ";
             desc = "Config ";
             key = "c";
-            action = "e $HOME/work/config";
+            action = "e $HOME/Sync/unitedstatesofsmash/flake.nix";
           }
         ];
       };

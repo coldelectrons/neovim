@@ -20,9 +20,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    tokyodark = {
-      url = "github:tiagovla/tokyodark.nvim";
-      flake = false;
+    # tokyodark = {
+    #   url = "github:tiagovla/tokyodark.nvim";
+    #   flake = false;
+    # };
+    
+    care = {
+      url = "github:max397574/care.nvim";
+      flake = true;
     };
   };
 
@@ -45,7 +50,9 @@
 
       alias.packages.default = "neovim";
 
-      overlays = with inputs; [ nixvim.overlays.default ];
+      overlays = with inputs; [
+        nixvim.overlays.default
+      ];
 
       outputs-builder = channels: {
         formatter = channels.nixpkgs.nixfmt-rfc-style;

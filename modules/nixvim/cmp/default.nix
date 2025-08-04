@@ -70,7 +70,7 @@
 
         sources = [
           { name = "path"; }
-          { name = "copilot"; }
+          # { name = "copilot"; }
           { name = "nvim_lsp"; }
           { name = "luasnip"; }
           { name = "buffer"; }

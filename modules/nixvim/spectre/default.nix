@@ -2,7 +2,7 @@
 {
   plugins = {
     spectre = {
-      enable = !config.plugins.grug-far.enable;
+      enable = true;
       lazyLoad = {
         settings = {
           cmd = "Spectre";
@@ -14,7 +14,7 @@
   keymaps = lib.mkIf config.plugins.spectre.enable [
     {
       mode = "n";
-      key = "<leader>rs";
+      key = "<leader>SS";
       action = "<cmd>Spectre<CR>";
       options = {
         desc = "Spectre toggle";

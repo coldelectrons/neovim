@@ -154,9 +154,9 @@ in
       # helm-ls.enable = true;
       html.enable = true;
       jsonls.enable = true;
-      ltex.enable = true;
+      # ltex.enable = true;
       lua_ls.enable = true;
-      nginx_language_server.enable = true;
+      # nginx_language_server.enable = true;
       nixd = {
         enable = true;
 
@@ -186,10 +186,8 @@ in
           };
         };
       };
-      nushell.enable = true;
-      perlpls.enable = true;
-      # phpactor.enable = true;
-      # prismals.enable = true;
+      # nushell.enable = true;
+      # perlpls.enable = true;
       pyright.enable = true;
 
       rust_analyzer = {
@@ -199,12 +197,24 @@ in
       };
 
       sqls.enable = true;
-      # tailwindcss.enable = true;
-      # terraformls.enable = true;
       ts_ls.enable = true;
-      # volar.enable = true;
       yamlls.enable = true;
+      zk.enable = true;
       zls.enable = true;
     };
+  };
+  lsp.servers.clangd.settings = {
+    cmd = [
+      "clangd"
+      "--background-index"
+    ];
+    filetypes = [
+      "c"
+      "cpp"
+    ];
+    root_markers = [
+      "compile_commands.json"
+      "compile_flags.txt"
+    ];
   };
 }
