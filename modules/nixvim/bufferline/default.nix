@@ -1,7 +1,7 @@
 {
   plugins.bufferline = {
     enable = true;
-    lazyload = {
+    lazyLoad = {
       enable = true;
       settings = {
         cmd = "Bufferline";

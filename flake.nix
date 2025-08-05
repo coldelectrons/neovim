@@ -52,6 +52,7 @@
 
       overlays = with inputs; [
         nixvim.overlays.default
+        care.overlays.default
       ];
 
       outputs-builder = channels: {
