@@ -7,7 +7,7 @@
   luaLoader.enable = true;
 
   extraPlugins = with pkgs.vimPlugins; [
-    vim-bufkill
+    #vim-bufkill
   ];
 
   globals = {
