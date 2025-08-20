@@ -120,7 +120,7 @@
         }
         {
           mode = "n";
-          key = "<leader>fe";
+          key = "<leader>e";
           action = ''<cmd>lua Snacks.explorer()<cr>'';
           options = {
             desc = "File Explorer";

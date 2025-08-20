@@ -8,7 +8,7 @@
       key = "<leader>t";
       action = "";
       options = {
-        desc = "Telescope";
+        desc = "Telescope search";
       };
     }
   ];
@@ -20,25 +20,25 @@
       "<leader>tf" = {
         action = "git_files";
         options = {
-          desc = "Telescope: Files";
+          desc = "Search: Files";
         };
       };
       "<leader>tF" = {
         action = "find_files hidden=true";
         options = {
-          desc = "Telescope: Files (hidden)";
+          desc = "Search: Files (hidden)";
         };
       };
       "<leader>tg" = {
         action = "live_grep";
         options = {
-          desc = "Telescope: Grep";
+          desc = "Search: Grep";
         };
       };
       "<leader>tG" = {
         action = "live_grep hidden=true";
         options = {
-          desc = "Telescope: Grep (hidden)";
+          desc = "Search: Grep (hidden)";
         };
       };
     };

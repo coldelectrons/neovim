@@ -19,8 +19,8 @@
 
 ## Screenshots
 
-![Busy](https://github.com/jakehamilton/neovim/assets/7005773/cc318a24-51aa-4412-9cfa-610ab9cc8991)
-![Dashboard](https://github.com/jakehamilton/neovim/assets/7005773/27c3a3c4-acf0-4a89-be1e-4f642144348a)
+![Busy](https://github.com/coldelectrons/neovim/assets/7005773/cc318a24-51aa-4412-9cfa-610ab9cc8991)
+![Dashboard](https://github.com/coldelectrons/neovim/assets/7005773/27c3a3c4-acf0-4a89-be1e-4f642144348a)
 
 ## Try Without Installing
 
@@ -28,7 +28,7 @@ You can try this configuration out without committing to installing it on your s
 the following command.
 
 ```nix
-nix run github:jakehamilton/neovim
+nix run github:coldelectrons/neovim
 ```
 
 ## Install
@@ -38,7 +38,7 @@ nix run github:jakehamilton/neovim
 You can install this package imperatively with the following command.
 
 ```nix
-nix profile install github:jakehamilton/neovim
+nix profile install github:coldelectrons/neovim
 ```
 
 ### Nix Configuration
@@ -60,7 +60,7 @@ You can install this package by adding it as an input to your Nix flake.
 		};
 
 		neovim = {
-			url = "github:jakehamilton/neovim";
+			url = "github:coldelectrons/neovim";
 			# This flake currently requires changes that are only on the Unstable channel.
 			inputs.nixpkgs.follows = "nixpkgs";
 			inputs.unstable.follows = "unstable";
