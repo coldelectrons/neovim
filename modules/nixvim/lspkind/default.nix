@@ -1,6 +1,6 @@
 {
   plugins.lspkind = {
-    enable = false;
+    enable = true;
     settings = {
       maxwidth = 50;
       # ellipsis_char = "...";
