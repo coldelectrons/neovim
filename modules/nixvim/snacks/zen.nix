@@ -1,7 +1,6 @@
-{
-  config,
-  lib,
-  ...
+{ config
+, lib
+, ...
 }:
 {
   plugins = {
@@ -24,7 +23,7 @@
       [
         {
           mode = "n";
-          key = "<leader>uZ";
+          key = "<leader>Z";
           action = "<cmd>lua Snacks.zen()<CR>";
           options = {
             desc = "Zen Toggle";

@@ -14,7 +14,7 @@
   keymaps = lib.mkIf config.plugins.spectre.enable [
     {
       mode = "n";
-      key = "<leader>SS";
+      key = "<leader>S";
       action = "<cmd>Spectre<CR>";
       options = {
         desc = "Spectre toggle";

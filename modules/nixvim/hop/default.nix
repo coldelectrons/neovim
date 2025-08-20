@@ -1,14 +1,14 @@
 {
   plugins.hop.enable = true;
 
-  plugins.which-key.settings.spec = [
-    {
-      __unkeyed-1 = "<leader><leader>";
-      group = "+Hop";
-      icon = "󰓩 ";
-    }
-  ];
   keymaps = [
+    {
+      key = "<leader><leader>";
+      action = "";
+      options = {
+        desc = "Hop";
+      };
+    }
     {
       key = "<leader><leader>a";
       action = "<cmd>HopAnywhere<cr>";

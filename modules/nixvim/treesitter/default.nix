@@ -2,9 +2,7 @@
   plugins = {
     treesitter = {
       enable = true;
-
       settings = {
-
         indent.enable = true;
       };
       folding = true;
@@ -15,10 +13,18 @@
   keymaps = [
     {
       mode = "n";
-      action = "<cmd>Inspect<cr>";
-      key = "gH";
+      key = "<leader>xt";
+      action = "";
       options = {
-        desc = "Treesitter: Show captures";
+        desc = "Treesitter";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>xth";
+      action = "<cmd>Inspect<cr>";
+      options = {
+        desc = "Treesitter: Inspect";
         silent = true;
         noremap = true;
       };
@@ -29,9 +35,9 @@
         "v"
       ];
       action = "<cmd>InspectTree<cr>";
-      key = "<leader>tP";
+      key = "<leader>xtP";
       options = {
-        desc = "Treesitter: Show tree";
+        desc = "Treesitter: inspect tree";
         silent = true;
         noremap = true;
       };

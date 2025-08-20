@@ -1,19 +1,11 @@
 { helpers, ... }: {
-  # plugins.which-key.settings.spec = [
-  #    {
-  #      __unkeyed-1 = "<leader>n";
-  #    group = "+NvimTree";
-  #    icon = "󰓩 ";
-  #  }
-  #];
   keymaps = [
     {
       mode = [
         "n"
-        "v"
       ];
       action = "<cmd>NvimTreeToggle<CR>";
-      key = "<leader>fe";
+      key = "<leader>nt";
       options = {
         desc = "nvim-tree: Toggle";
         silent = true;
@@ -22,19 +14,18 @@
     }
     {
       mode = "n";
-      key = "<leader>ff";
-      action = "<cmd>NvimTreeFindFile<cr>";
+      key = "<leader>n";
+      action = "";
       options = {
-        desc = "nvim-tree: Find File";
-        silent = true;
+        desc = "nvim-tree";
       };
     }
     {
       mode = "n";
-      key = "<leader>ff";
+      key = "<leader>nf";
       action = "<cmd>NvimTreeFindFile<cr>";
       options = {
-        desc = "nvim-tree: Find File";
+        desc = "nvim-tree: find current file (buffer) in tree";
         silent = true;
       };
     }

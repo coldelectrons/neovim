@@ -1,7 +1,6 @@
-{
-  config,
-  lib,
-  ...
+{ config
+, lib
+, ...
 }:
 {
   imports = [
@@ -64,10 +63,10 @@
       [
         {
           mode = "n";
-          key = "<leader><space>";
+          key = "<leader>f<space>";
           action = ''<cmd>lua Snacks.picker.smart()<cr>'';
           options = {
-            desc = "Smart Find Files";
+            desc = "Find Smart (picker)";
           };
         }
         {
@@ -129,6 +128,14 @@
         }
         {
           mode = "n";
+          key = "<leader>f";
+          action = '''';
+          options = {
+            desc = "Find";
+          };
+        }
+        {
+          mode = "n";
           key = "<leader>ff";
           action = ''<cmd>lua Snacks.picker.files()<cr>'';
           options = {
@@ -172,7 +179,7 @@
           key = "<leader>fo";
           action = ''<cmd>lua Snacks.picker.recent()<cr>'';
           options = {
-            desc = "Find old files";
+            desc = "Find recent files";
           };
         }
         {
@@ -226,18 +233,10 @@
         })
         {
           mode = "n";
-          key = "<leader>fT";
-          action = ''<cmd>lua Snacks.picker.colorschemes()<cr>'';
-          options = {
-            desc = "Find theme";
-          };
-        }
-        {
-          mode = "n";
           key = "<leader>fu";
           action = "<cmd>lua Snacks.picker.undo()<cr>";
           options = {
-            desc = "Undo History";
+            desc = "Find Undo History";
           };
         }
         {
@@ -245,7 +244,7 @@
           key = "<leader>fw";
           action = "<cmd>lua Snacks.picker.grep()<cr>";
           options = {
-            desc = "Live grep";
+            desc = "Find Live grep";
           };
         }
         {
@@ -253,7 +252,7 @@
           key = "<leader>fW";
           action = "<cmd>lua Snacks.picker.grep({hidden = true, ignored = true})<cr>";
           options = {
-            desc = "Live grep (All files)";
+            desc = "Find Live grep (All files)";
           };
         }
         {
@@ -319,7 +318,7 @@
         }
         {
           mode = "n";
-          key = "<leader>X";
+          key = "<leader>uX";
           action = ''<cmd>lua Snacks.profiler.toggle()<cr>'';
           options = {
             desc = "Toggle Neovim profiler";

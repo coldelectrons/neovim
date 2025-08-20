@@ -2,38 +2,43 @@
 {
   extraPackages = with pkgs; [ ripgrep ];
 
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>t";
+      action = "";
+      options = {
+        desc = "Telescope";
+      };
+    }
+  ];
+
   plugins.telescope = {
     enable = true;
 
     keymaps = {
-      "<C-p>" = {
+      "<leader>tf" = {
         action = "git_files";
         options = {
           desc = "Telescope: Files";
         };
       };
-      "<leader>ff" = {
-        action = "git_files";
-        options = {
-          desc = "Telescope: Files";
-        };
-      };
-      "<leader>fF" = {
+      "<leader>tF" = {
         action = "find_files hidden=true";
         options = {
           desc = "Telescope: Files (hidden)";
         };
       };
-      "<leader>fg" = {
+      "<leader>tg" = {
         action = "live_grep";
         options = {
           desc = "Telescope: Grep";
         };
       };
-      "<leader>fG" = {
+      "<leader>tG" = {
         action = "live_grep hidden=true";
         options = {
-          desc = "Telescope: Files";
+          desc = "Telescope: Grep (hidden)";
         };
       };
     };

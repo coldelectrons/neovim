@@ -1,7 +1,6 @@
-{
-  config,
-  lib,
-  ...
+{ config
+, lib
+, ...
 }:
 {
   plugins = {
@@ -24,7 +23,7 @@
       [
         {
           mode = "n";
-          key = "<leader>gg";
+          key = "<leader>GG";
           action = "<cmd>lua Snacks.lazygit()<CR>";
           options = {
             desc = "Open lazygit";

@@ -1,7 +1,6 @@
-{
-  config,
-  lib,
-  ...
+{ config
+, lib
+, ...
 }:
 {
   plugins = {
@@ -24,7 +23,7 @@
       [
         {
           mode = "n";
-          key = "<leader>go";
+          key = "<leader>GO";
           action = "<cmd>lua Snacks.gitbrowse()<CR>";
           options = {
             desc = "Open file in browser";

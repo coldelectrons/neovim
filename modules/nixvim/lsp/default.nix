@@ -18,18 +18,18 @@ in
   ];
 
   extraConfigLua = ''
-		do
-			require("actions-preview").setup({
-				diff = {
-					ignore_whitespace = true,
-				},
-				highlight_command = {
-					require("actions-preview.highlight").diff_highlight()
-				},
-				backend = { "telescope" },
-			})
-		end
-	'';
+    		do
+    			require("actions-preview").setup({
+    				diff = {
+    					ignore_whitespace = true,
+    				},
+    				highlight_command = {
+    					require("actions-preview.highlight").diff_highlight()
+    				},
+    				backend = { "telescope" },
+    			})
+    		end
+    	'';
 
   extraConfigLuaPre = ''
     do
@@ -88,50 +88,57 @@ in
 
       extra = [
         {
-          action = thunk "vim.cmd [[<cmd>LspStop<CR>]]";
+          key = "<leader>l";
+          action = "";
+          options = {
+            desc = "LSP:";
+          };
+        }
+        {
           key = "<leader>lx";
+          action = thunk "vim.cmd [[<cmd>LspStop<CR>]]";
           options = {
             desc = "LSP: Stop";
             silent = true;
           };
         }
         {
-          action = thunk "vim.cmd [[<cmd>LspStart<CR>]]";
           key = "<leader>ls";
+          action = thunk "vim.cmd [[<cmd>LspStart<CR>]]";
           options = {
             desc = "LSP: Start";
             silent = true;
           };
         }
         {
-          action = thunk "vim.cmd [[<cmd>LspRestart<CR>]]";
           key = "<leader>lr";
+          action = thunk "vim.cmd [[<cmd>LspRestart<CR>]]";
           options = {
             desc = "LSP: Restart";
             silent = true;
           };
         }
         {
+          key = "<leader>ld";
           action =
             helpers.mkRaw
               # lua
               ''
                 require('telescope.builtin').lsp_definitions
               '';
-          key = "<leader>gd";
           options = {
             desc = "LSP: Definitions";
             silent = true;
           };
         }
         {
+          key = "<leader>lc";
           action =
             helpers.mkRaw
               # lua
               ''
                 require('actions-preview').code_actions
               '';
-          key = "<leader>ca";
           options = {
             desc = "LSP: Code Actions";
             silent = true;

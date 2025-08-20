@@ -1,7 +1,6 @@
-{
-  config,
-  lib,
-  ...
+{ config
+, lib
+, ...
 }:
 {
   keymaps =
@@ -12,71 +11,79 @@
           key = "<leader>fG";
           action = ''<cmd>lua Snacks.picker.git_files()<cr>'';
           options = {
-            desc = "Find Git Files";
+            desc = "Find git files";
           };
         }
         {
           mode = "n";
-          key = "<leader>gB";
+          key = "<leader>G";
+          action = "";
+          options = {
+            desc = "Git";
+          };
+        }
+        {
+          mode = "n";
+          key = "<leader>Gb";
           action = ''<cmd>lua Snacks.picker.git_branches()<cr>'';
           options = {
-            desc = "Find git branches";
+            desc = "Git branches";
           };
         }
         {
           mode = "n";
-          key = "<leader>gC";
+          key = "<leader>Gc";
           action = ''<cmd>lua Snacks.picker.git_log()<cr>'';
           options = {
-            desc = "Find git commits";
+            desc = "Git commits";
           };
         }
         {
           mode = "n";
-          key = "<leader>gs";
+          key = "<leader>Gs";
           action = ''<cmd>lua Snacks.picker.git_status()<cr>'';
           options = {
-            desc = "Find git status";
+            desc = "Git status";
           };
         }
         {
           mode = "n";
-          key = "<leader>gS";
+          key = "<leader>GS";
           action = ''<cmd>lua Snacks.picker.git_stash()<cr>'';
           options = {
-            desc = "Find git stashes";
+            desc = "Git stashes";
           };
         }
         {
           mode = "n";
-          key = "<leader>gl";
+          key = "<leader>Gl";
           action = ''<cmd>lua Snacks.picker.git_log()<cr>'';
           options = {
-            desc = "Git Log";
+            desc = "Git log";
           };
         }
         {
           mode = "n";
-          key = "<leader>gL";
+          key = "<leader>GL";
           action = ''<cmd>lua Snacks.picker.git_log_line()<cr>'';
           options = {
-            desc = "Git Log Line";
+            desc = "Git log line";
           };
         }
         {
           mode = "n";
-          key = "<leader>gd";
+          key = "<leader>Gd";
           action = ''<cmd>lua Snacks.picker.git_diff()<cr>'';
           options = {
-            desc = "Git Diff (Hunks)";
+            desc = "Git diff (hunks)";
           };
         }
         {
           mode = "n";
-          key = "<leader>gf";
+          key = "<leader>Gf";
           action = ''<cmd>lua Snacks.picker.git_log_file()<cr>'';
           options = {
-            desc = "Git Log File";
+            desc = "Git log file";
           };
         }
       ];
