@@ -11,43 +11,44 @@ in
 {
   extraPackages = with pkgs; [
     nixfmt-rfc-style
+    clangd
   ];
 
   extraPlugins = with pkgs.vimPlugins; [
     actions-preview-nvim
   ];
 
-  extraConfigLua = ''
-    		do
-    			require("actions-preview").setup({
-    				diff = {
-    					ignore_whitespace = true,
-    				},
-    				highlight_command = {
-    					require("actions-preview.highlight").diff_highlight()
-    				},
-    				backend = { "telescope" },
-    			})
-    		end
-    	'';
-
-  extraConfigLuaPre = ''
-    do
-      local diagnostic_signs = { Error = "", Warn = "", Hint = "", Info = "" }
-
-      for type, icon in pairs(diagnostic_signs) do
-        local hl = "DiagnosticSign" .. type
-        vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-      end
-
-      vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-        underline = true,
-        update_in_insert = true,
-        virtual_text = { spacing = 4, prefix = "●" },
-        severity_sort = true,
-      })
-    end
-  '';
+  # extraConfigLua = ''
+  #   		do
+  #   			require("actions-preview").setup({
+  #   				diff = {
+  #   					ignore_whitespace = true,
+  #   				},
+  #   				highlight_command = {
+  #   					require("actions-preview.highlight").diff_highlight()
+  #   				},
+  #   				backend = { "telescope" },
+  #   			})
+  #   		end
+  #   	'';
+  #
+  # extraConfigLuaPre = ''
+  #   do
+  #     local diagnostic_signs = { Error = "", Warn = "", Hint = "", Info = "" }
+  #
+  #     for type, icon in pairs(diagnostic_signs) do
+  #       local hl = "DiagnosticSign" .. type
+  #       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+  #     end
+  #
+  #     vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+  #       underline = true,
+  #       update_in_insert = true,
+  #       virtual_text = { spacing = 4, prefix = "●" },
+  #       severity_sort = true,
+  #     })
+  #   end
+  # '';
 
   autoCmd = [
     {
@@ -209,8 +210,11 @@ in
       zk.enable = true;
       zls.enable = true;
     };
+
   };
+
   lsp.servers.clangd.settings = {
+    enable = true;
     cmd = [
       "clangd"
       "--background-index"
@@ -218,8 +222,11 @@ in
     filetypes = [
       "c"
       "cpp"
+      "h"
+      "hpp"
     ];
     root_markers = [
+      ".clangd"
       "compile_commands.json"
       "compile_flags.txt"
     ];

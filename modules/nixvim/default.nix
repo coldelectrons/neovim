@@ -256,5 +256,41 @@
         desc = "resize with arrows";
       };
     }
+    {
+      mode = "n";
+      key = "<leader>w";
+      action = '''';
+      options = {
+        silent = true;
+        desc = "Window";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>ws";
+      action = ''<C-W>s'';
+      options = {
+        silent = true;
+        desc = "Window split horizontally";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>wv";
+      action = ''<C-W>v'';
+      options = {
+        silent = true;
+        desc = "Window split vertically";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>wc";
+      action = ''<C-W>c'';
+      options = {
+        silent = true;
+        desc = "Window split close";
+      };
+    }
   ];
 }
