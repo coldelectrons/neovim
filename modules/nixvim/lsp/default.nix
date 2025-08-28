@@ -151,15 +151,8 @@ in
     servers = {
       clangd.enable = true;
       cmake.enable = true;
-      # dockerls.enable = true;
-      # docker-compose-language-service.enable = true;
-      # eslint.enable = true;
-      # emmet-ls.enable = true;
-      # gleam.enable = true;
       # gdscript.enable = true;
       # gopls.enable = true;
-      # graphql.enable = true;
-      # helm-ls.enable = true;
       html.enable = true;
       jsonls.enable = true;
       # ltex.enable = true;
@@ -194,9 +187,7 @@ in
           };
         };
       };
-      # nushell.enable = true;
-      # perlpls.enable = true;
-      pyright.enable = true;
+      #pyright.enable = true; # doesn't compile 20250828
 
       rust_analyzer = {
         enable = true;
