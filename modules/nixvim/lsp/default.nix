@@ -11,7 +11,7 @@ in
 {
   extraPackages = with pkgs; [
     nixfmt-rfc-style
-    clangd
+    clang-tools
   ];
 
   extraPlugins = with pkgs.vimPlugins; [
