@@ -41,6 +41,12 @@
           desc = "Search: Grep (hidden)";
         };
       };
+      "<leader>td" = {
+        action = "diagnostics";
+        options = {
+          desc = "Diagnostics";
+        };
+      };
     };
 
     extensions = {

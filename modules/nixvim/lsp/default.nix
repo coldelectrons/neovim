@@ -187,7 +187,7 @@ in
           };
         };
       };
-      #pyright.enable = true; # doesn't compile 20250828
+      pyright.enable = true;
 
       rust_analyzer = {
         enable = true;
