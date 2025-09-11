@@ -34,7 +34,7 @@
           key = "<C-w>";
           action = ''<cmd>lua Snacks.bufdelete.delete()<cr>'';
           options = {
-            desc = "Close buffer";
+            desc = "Close (delete) buffer";
           };
         }
         {
