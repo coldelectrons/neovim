@@ -1,3 +1,4 @@
+{ config, lib, ... }:
 {
   plugins.telekasten = {
     enable = true;
@@ -7,7 +8,7 @@
       };
     };
   };
-  keymaps = [
+  keymaps = lib.mkIf config.plugins.telekasten.enable [
     {
       key = "<leader>z";
       action = "";

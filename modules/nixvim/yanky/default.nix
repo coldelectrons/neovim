@@ -1,6 +1,26 @@
 { config, lib, ... }:
-let
-  yankyKeymaps = [
+{
+  plugins = {
+    yanky = {
+      enable = true;
+      enableTelescope = true;
+
+      settings = {
+        ring = {
+          history_length = 10;
+          storage = "sqlite";
+          storage_path.__raw = "vim.fn.stdpath('data') .. '/databases/yanky.db'";
+          sync_with_numbered_registers = true;
+          cancel_event = "update";
+          ignore_registers = [ "_" ];
+          update_register_on_cycle = false;
+        };
+      };
+    };
+    sqlite-lua.enable = true;
+  };
+
+  keymaps = lib.mkIf config.plugins.yanky.enable [
     {
       mode = [
         "n"
@@ -118,8 +138,6 @@ let
       action = "<Plug>(YankyPutBeforeFilter)";
       options.desc = "Put before applying a filter";
     }
-  ]
-  ++ lib.optionals config.plugins.telescope.enable [
     {
       mode = "n";
       key = "<leader>ty";
@@ -127,41 +145,4 @@ let
       options.desc = "Telescope paste from yanky";
     }
   ];
-
-  yankyLazyKeys = map
-    (keymap: {
-      __unkeyed-1 = keymap.key;
-      __unkeyed-2 = keymap.action;
-      mode = keymap.mode or "n";
-      inherit (keymap.options) desc;
-    })
-    yankyKeymaps;
-in
-{
-  plugins = {
-    yanky = {
-      enable = true;
-      enableTelescope = true;
-
-      lazyLoad = {
-        settings = {
-          keys = lib.mkIf config.plugins.lz-n.enable yankyLazyKeys;
-        };
-      };
-
-      settings = {
-        ring = {
-          history_length = 10;
-          storage = "sqlite";
-          storage_path.__raw = "vim.fn.stdpath('data') .. '/databases/yanky.db'";
-          sync_with_numbered_registers = true;
-          cancel_event = "update";
-          ignore_registers = [ "_" ];
-          update_register_on_cycle = false;
-        };
-      };
-    };
-  };
-
-  keymaps = lib.mkIf (!config.plugins.lz-n.enable && config.plugins.yanky.enable) yankyKeymaps;
 }
