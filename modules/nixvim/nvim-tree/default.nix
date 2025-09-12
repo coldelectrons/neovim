@@ -1,4 +1,4 @@
-{ config, helpers, ... }: {
+{ config, lib, helpers, ... }: {
   keymaps = lib.mkIf config.plugins.nvim-tree.enable [
     {
       mode = [
