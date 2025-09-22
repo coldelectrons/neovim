@@ -32,7 +32,7 @@
   ];
 
   plugins.nvim-tree = {
-    enable = true;
+    enable = false;
 
     settings = {
       select_prompts = true;

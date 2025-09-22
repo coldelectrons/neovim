@@ -60,6 +60,14 @@
   keymaps = [
     {
       mode = "n";
+      key = "<leader>x";
+      action = "";
+      options = {
+        desc = "e[x]tras";
+      };
+    }
+    {
+      mode = "n";
       key = "<leader>ch";
       action = "<cmd>noh<cr>";
       options = {

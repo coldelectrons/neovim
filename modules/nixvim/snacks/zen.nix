@@ -23,7 +23,7 @@
       [
         {
           mode = "n";
-          key = "<leader>Z";
+          key = "<leader>TZ";
           action = "<cmd>lua Snacks.zen()<CR>";
           options = {
             desc = "Zen Toggle";
