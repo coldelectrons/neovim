@@ -26,7 +26,7 @@
           key = "<leader>TZ";
           action = "<cmd>lua Snacks.zen()<CR>";
           options = {
-            desc = "Zen Toggle";
+            desc = "Toggle Zen Mode";
           };
         }
       ];

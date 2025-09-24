@@ -25,7 +25,7 @@
   plugins = lib.mkMerge [
     {
       blink-cmp = {
-        enable = true;
+        enable = false;
 
         lazyLoad.settings.event = [
           "InsertEnter"

@@ -68,7 +68,17 @@
 
   keymaps = lib.mkIf config.plugins.flash.enable [
     {
-      key = "s";
+      key = "<leader>F";
+      action = "";
+      mode = [
+        "n"
+        "x"
+        "o"
+      ];
+      options.desc = "Flash";
+    }
+    {
+      key = "<leader>Fs";
       action.__raw = ''function() require("flash").jump() end'';
       mode = [
         "n"
@@ -78,7 +88,7 @@
       options.desc = "Flash";
     }
     {
-      key = "S";
+      key = "<leader>FS";
       action.__raw = ''function() require("flash").treesitter() end'';
       mode = [
         "n"
@@ -88,7 +98,7 @@
       options.desc = "Flash Treesitter";
     }
     {
-      key = "r";
+      key = "<leader>Fr";
       action.__raw = ''function() require("flash").remote() end'';
       mode = [
         "o"
@@ -96,7 +106,7 @@
       options.desc = "Remote Flash";
     }
     {
-      key = "R";
+      key = "<leader>FR";
       action.__raw = ''function() require("flash").treesitter_search() end'';
       mode = [
         "o"
@@ -104,7 +114,7 @@
       options.desc = "Treesitter Search";
     }
     {
-      key = "gl";
+      key = "<leader>Fl";
       action.__raw = ''
         function()
           require("flash").jump {

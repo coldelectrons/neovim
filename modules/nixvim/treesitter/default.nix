@@ -1,12 +1,12 @@
 { config
 , lib
-, self
-, system
-,
+, pkgs
+, options
+, ...
 }:
 {
-  extraPlugins = [
-    self.packages.${system}.tree-sitter-cpp2
+  extraPlugins = with pkgs; [
+    pkgs.plusultra.tree-sitter-cpp2
   ];
 
   plugins = {
@@ -18,7 +18,7 @@
       folding = true;
       nixvimInjections = true;
       grammarPackages = config.plugins.treesitter.package.passthru.allGrammars ++ [
-        self.packages.${system}.tree-sitter-cpp2
+        pkgs.plusultra.tree-sitter-cpp2
       ];
     };
   };
