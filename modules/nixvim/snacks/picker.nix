@@ -295,19 +295,6 @@
             desc = "Resume find";
           };
         }
-
-        {
-          mode = [
-            "n"
-            "x"
-          ];
-          key = "<leader>sw";
-          action = ''<cmd>lua Snacks.picker.grep_word()<cr>'';
-          options = {
-            desc = "Search Word (visual or cursor)";
-          };
-        }
-
         {
           mode = "n";
           key = "<leader>uC";
@@ -318,10 +305,10 @@
         }
         {
           mode = "n";
-          key = "<leader>uX";
+          key = "<leader>TX";
           action = ''<cmd>lua Snacks.profiler.toggle()<cr>'';
           options = {
-            desc = "Toggle Neovim profiler";
+            desc = "Toggle Snacks Neovim profiler";
           };
         }
       ];
