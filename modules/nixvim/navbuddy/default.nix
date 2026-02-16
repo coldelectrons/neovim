@@ -1,8 +1,10 @@
 {
   plugins.navbuddy = {
     enable = true;
-    lsp = {
-      autoAttach = true;
+    settings = {
+      lsp = {
+        auto_attach = true;
+      };
     };
     #icons = {
     # Array = "";

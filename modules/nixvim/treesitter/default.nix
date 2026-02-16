@@ -15,7 +15,7 @@
       settings = {
         indent.enable = true;
       };
-      folding = true;
+      folding.enable = true;
       nixvimInjections = true;
       grammarPackages = config.plugins.treesitter.package.passthru.allGrammars ++ [
         pkgs.plusultra.tree-sitter-cpp2

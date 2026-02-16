@@ -4,7 +4,7 @@
       mode = [
         "n"
       ];
-      action = "<cmd>NvimTreeToggle<CR>";
+      action = "<cmd>NvimTreeToggle<cr>";
       key = "<leader>nt";
       options = {
         desc = "nvim-tree: Toggle";
