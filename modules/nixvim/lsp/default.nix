@@ -1,4 +1,4 @@
-{ helpers, pkgs, ... }:
+{ lib, pkgs, helpers,... }:
 let
   thunk =
     body:

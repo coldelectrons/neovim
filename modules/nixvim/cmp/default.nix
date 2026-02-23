@@ -1,4 +1,7 @@
-{ helpers, ... }:
+{ lib, helpers,... }:
+# let
+#   helpers = lib.nixvim;
+# in
 {
   plugins = {
     luasnip.enable = true;
