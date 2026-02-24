@@ -204,7 +204,7 @@ in
 
   };
 
-  lsp.servers.clangd.settings = {
+  lsp.servers.clangd.config = {
     enable = true;
     cmd = [
       "clangd"
