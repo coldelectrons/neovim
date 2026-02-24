@@ -24,7 +24,7 @@
     #   url = "github:tiagovla/tokyodark.nvim";
     #   flake = false;
     # };
-    
+
     care = {
       url = "github:max397574/care.nvim";
       flake = true;
@@ -56,7 +56,7 @@
       ];
 
       outputs-builder = channels: {
-        formatter = channels.nixpkgs.nixfmt-rfc-style;
+        formatter = channels.nixpkgs.nixfmt;
 
         checks.pre-commit-check = inputs.pre-commit-hooks.lib.${channels.nixpkgs.system}.run {
           src = ./.;

@@ -3,21 +3,21 @@
     illuminate = {
       enable = true;
 
-      # TODO: migrate to mkNeovimPlugin
-      # lazyLoad.settings.event = "DeferredUIEnter";
-
-      filetypesDenylist = [
-        "dirvish"
-        "fugitive"
-        "alpha"
-        "neo-tree"
-        "lazy"
-        "TelescopePrompt"
-        "Trouble"
-        "NvimTree"
-        "spectre_panel"
-      ];
-      largeFileCutoff = 3000;
+      settings = {
+        filetypes_denylist = [
+          "dirvish"
+          "fugitive"
+          "alpha"
+          "neo-tree"
+          "lazy"
+          "TelescopePrompt"
+          "Trouble"
+          "NvimTree"
+          "Yazi"
+          "spectre_panel"
+        ];
+        large_file_cutoff = 3000;
+      };
     };
   };
 }
