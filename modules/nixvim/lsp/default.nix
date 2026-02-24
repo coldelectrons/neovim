@@ -10,7 +10,7 @@ let
 in
 {
   extraPackages = with pkgs; [
-    nixfmt-rfc-style
+    nixfmt
     clang-tools
   ];
 
