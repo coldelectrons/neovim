@@ -44,42 +44,18 @@
       };
     };
   };
-# <LocalLeader>tu	<Plug>(neorg.qol.todo-items.todo.task-undone)	Mark task as undone
-# <LocalLeader>tp	<Plug>(neorg.qol.todo-items.todo.task-pending)	Mark task as pending
-# <LocalLeader>td	<Plug>(neorg.qol.todo-items.todo.task-done)	Mark task as done
-# <LocalLeader>th	<Plug>(neorg.qol.todo-items.todo.task-on-hold)	Mark task as on hold
-# <LocalLeader>tc	<Plug>(neorg.qol.todo-items.todo.task-cancelled)	Mark task as cancelled
-# <LocalLeader>tr	<Plug>(neorg.qol.todo-items.todo.task-recurring)	Mark task as recurring
-# <LocalLeader>ti	<Plug>(neorg.qol.todo-items.todo.task-important)	Mark task as important
-# <LocalLeader>ta	<Plug>(neorg.qol.todo-items.todo.task-ambiguous)	Mark task as ambiguous
-# <C-Space>	<Plug>(neorg.qol.todo-items.todo.task-cycle)	Cycle task status
-# <CR>	<Plug>(neorg.esupports.hop.hop-link)	Jump to link
-# <M-CR>	<Plug>(neorg.esupports.hop.hop-link.vsplit)	Jump to link in vertical split
-# <M-t>	<Plug>(neorg.esupports.hop.hop-link.tab-drop)	Jump to link in new/existing tab
-# >.	<Plug>(neorg.promo.promote)	Promote object (non-recursively)
-# <,	<Plug>(neorg.promo.demote)	Demote object (non-recursively)
-# >>	<Plug>(neorg.promo.promote.nested)	Promote object (recursively)
-# <<	<Plug>(neorg.promo.demote.nested)	Demote object (recursively)
-# <LocalLeader>lt	<Plug>(neorg.pivot.list.toggle)	Toggle between ordered/unordered list
-# <LocalLeader>li	<Plug>(neorg.pivot.list.invert)	Invert list items
-# <LocalLeader>id	<Plug>(neorg.tempus.insert-date)	Insert date link
-# <LocalLeader>cm	<Plug>(neorg.looking-glass.magnify-code-block)	Magnify code block to separate buffer
-# Insert Mode
-# Key	Action	Description
-# <C-t>	<Plug>(neorg.promo.promote)	Promote object (recursively)
-# <C-d>	<Plug>(neorg.promo.demote)	Demote object (recursively)
-# <M-CR>	<Plug>(neorg.itero.next-iteration)	Continue object (e.g., list item)
-# <M-d>	<Plug>(neorg.tempus.insert-date.insert-mode)	Insert date link
-# Visual Mode
-# Key	Action	Description
-# >	<Plug>(neorg.promo.promote.range)	Promote objects in range
-# <	<Plug>(neorg.promo.demote.range)	Demote objects in range
   keymaps = lib.mkIf config.plugins.neorg.enable [
     {
       mode = "n";
       key = "<leader>n";
       options.desc = "Neorg";
       action = "";
+    }
+    {
+      mode = "n";
+      key = "<leader>nn";
+      options.desc = "Neorg new note";
+      action = "<Plug>(neorg.dirman.new-note)";
     }
     {
       mode = "n";
@@ -140,6 +116,174 @@
       key = "<Leader>fl";
       options.desc = "Telescope find all neorg linkable files";
       action = "<cmd>Telescope neorg find_all_linkable_files<CR>";
+    }
+    {
+      mode = "n";
+      key = "<leader>nt";
+      options.desc = "Neorg task...";
+      action = "";
+    }
+    {
+      mode = "n";
+      key = "<Leader>ntu";
+      options.desc = "Neorg task - mark task as undone";
+      action = "<Plug>(neorg.qol.todo-items.todo.task-undone)";
+    }
+    {
+      mode = "n";
+      key = "<Leader>ntp";
+      options.desc = "Neorg task - mark task as pending";
+      action = "<Plug>(neorg.qol.todo-items.todo.task-pending)";
+    }
+    {
+      mode = "n";
+      key = "<Leader>ntd";
+      options.desc = "Neorg task - mark task as done";
+      action = "<Plug>(neorg.qol.todo-items.todo.task-done)";
+    }
+    {
+      mode = "n";
+      key = "<Leader>nth";
+      options.desc = "Neorg task - mark task as on hold";
+      action = "<Plug>(neorg.qol.todo-items.todo.task-on-hold)";
+    }
+    {
+      mode = "n";
+      key = "<Leader>ntc";
+      options.desc = "Neorg task - mark task as cancelled";
+      action = "<Plug>(neorg.qol.todo-items.todo.task-cancelled)";
+    }
+    {
+      mode = "n";
+      key = "<Leader>ntr";
+      options.desc = "Neorg task - mark task as recurring";
+      action = "<Plug>(neorg.qol.todo-items.todo.task-recurring)";
+    }
+    {
+      mode = "n";
+      key = "<Leader>nti";
+      options.desc = "Neorg task - mark task as important";
+      action = "<Plug>(neorg.qol.todo-items.todo.task-important)";
+    }
+    {
+      mode = "n";
+      key = "<Leader>nta";
+      options.desc = "Neorg task - mark task as ambiguous";
+      action = "<Plug>(neorg.qol.todo-items.todo.task-ambiguous)";
+    }
+    {
+      mode = "n";
+      key = "<C-Space>";
+      options.desc = "Neorg task - cycle";
+      action = "<Plug>(neorg.qol.todo-items.todo.task-cycle)";
+    }
+    {
+      mode = "n";
+      key = "<CR>";
+      options.desc = "Neorg jump to link";
+      action = "<Plug>(neorg.esupports.hop.hop-link)";
+    }
+    {
+      mode = "n";
+      key = "<M-CR>";
+      options.desc = "Neorg jump to link in vertical split";
+      action = "<Plug>(neorg.esupports.hop.hop-link.vsplit)";
+    }
+    {
+      mode = "n";
+      key = "<M-t>";
+      options.desc = "Neorg jump to link in new/existing tab";
+      action = "<Plug>(neorg.esupports.hop.hop-link.tab-drop)";
+    }
+    {
+      mode = "n";
+      key = ">.";
+      options.desc = "Neorg promote";
+      action = "<Plug>(neorg.promo.promote)";
+    }
+    {
+      mode = "n";
+      key = "<.";
+      options.desc = "Neorg demote";
+      action = "<Plug>(neorg.promo.demote)";
+    }
+    {
+      mode = "n";
+      key = ">>";
+      options.desc = "Neorg promote recursively";
+      action = "<Plug>(neorg.promo.promote.nested)";
+    }
+    {
+      mode = "n";
+      key = "<<";
+      options.desc = "Neorg demote recursively";
+      action = "<Plug>(neorg.promo.demote.nested)";
+    }
+    {
+      mode = "n";
+      key = "<Leader>nl";
+      options.desc = "Neorg list...";
+      action = "";
+    }
+    {
+      mode = "n";
+      key = "<Leader>nlt";
+      options.desc = "Neorg list toggle between ordered/unordered";
+      action = "<Plug>(neorg.pivot.list.toggle)";
+    }
+    {
+      mode = "n";
+      key = "<Leader>nli";
+      options.desc = "Neorg list invert";
+      action = "<Plug>(neorg.pivot.list.invert)";
+    }
+    {
+      mode = "n";
+      key = "<Leader>nid";
+      options.desc = "Neorg insert date link";
+      action = "<Plug>(neorg.tempus.insert-date)";
+    }
+    {
+      mode = "n";
+      key = "<Leader>nm";
+      options.desc = "Neorg magnify code block to separate buffer";
+      action = "<Plug>(neorg.looking-glass.magnify-code-block)";
+    }
+    {
+      mode = "i";
+      key = "<C-t>";
+      options.desc = "Neorg promote object recursively";
+      action = "<Plug>(neorg.promo.promote)";
+    }
+    {
+      mode = "i";
+      key = "<C-d>";
+      options.desc = "Neorg demote object recursively";
+      action = "<Plug>(neorg.promo.demote)";
+    }
+    {
+      mode = "i";
+      key = "<M-CR>";
+      options.desc = "Neorg continue object";
+      action = "<Plug>(neorg.itero.next-iteration)";
+    }
+    {
+      mode = "i";
+      key = "<M-d>";
+      options.desc = "Neorg insert date link";
+      action = "<Plug>(neorg.tempus.insert-date.insert-mode)";
+    }
+    {
+      mode = "v";
+      key = ">";
+      options.desc = "Neorg promote range";
+      action = "<Plug>(neorg.promo.promote.range)";
+    }
+    {
+      mode = "v";
+      key = "<";
+      options.desc = "Neorg demote range";
+      action = "<Plug>(neorg.promo.demote.range)";
     }
   ];
 }
