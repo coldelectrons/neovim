@@ -207,18 +207,19 @@
       options.desc = "Neorg demote";
       action = "<Plug>(neorg.promo.demote)";
     }
-    {
-      mode = "n";
-      key = "<C-Tab>";
-      options.desc = "Neorg promote recursively";
-      action = "<Plug>(neorg.promo.promote.nested)";
-    }
-    {
-      mode = "n";
-      key = "<S-C-Tab>";
-      options.desc = "Neorg demote recursively";
-      action = "<Plug>(neorg.promo.demote.nested)";
-    }
+    # WARN Can't do it like this, C-Tab is for switching desktop windows
+    # {
+    #   mode = "n";
+    #   key = "<C-Tab>";
+    #   options.desc = "Neorg promote recursively";
+    #   action = "<Plug>(neorg.promo.promote.nested)";
+    # }
+    # {
+    #   mode = "n";
+    #   key = "<S-C-Tab>";
+    #   options.desc = "Neorg demote recursively";
+    #   action = "<Plug>(neorg.promo.demote.nested)";
+    # }
     {
       mode = "n";
       key = "<Leader>nl";
@@ -249,18 +250,18 @@
       options.desc = "Neorg magnify code block to separate buffer";
       action = "<Plug>(neorg.looking-glass.magnify-code-block)";
     }
-    {
-      mode = "i";
-      key = "<C-Tab>";
-      options.desc = "Neorg promote object recursively";
-      action = "<Plug>(neorg.promo.promote)";
-    }
-    {
-      mode = "i";
-      key = "<S-C-Tab>";
-      options.desc = "Neorg demote object recursively";
-      action = "<Plug>(neorg.promo.demote)";
-    }
+    # {
+    #   mode = "i";
+    #   key = "<C-Tab>";
+    #   options.desc = "Neorg promote object recursively";
+    #   action = "<Plug>(neorg.promo.promote)";
+    # }
+    # {
+    #   mode = "i";
+    #   key = "<S-C-Tab>";
+    #   options.desc = "Neorg demote object recursively";
+    #   action = "<Plug>(neorg.promo.demote)";
+    # }
     {
       mode = "i";
       key = "<M-CR>";
