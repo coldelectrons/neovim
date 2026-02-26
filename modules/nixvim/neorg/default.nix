@@ -197,25 +197,25 @@
     }
     {
       mode = "n";
-      key = ">.";
+      key = "<Tab>";
       options.desc = "Neorg promote";
       action = "<Plug>(neorg.promo.promote)";
     }
     {
       mode = "n";
-      key = "<.";
+      key = "<S-Tab>";
       options.desc = "Neorg demote";
       action = "<Plug>(neorg.promo.demote)";
     }
     {
       mode = "n";
-      key = ">>";
+      key = "<C-Tab>";
       options.desc = "Neorg promote recursively";
       action = "<Plug>(neorg.promo.promote.nested)";
     }
     {
       mode = "n";
-      key = "<<";
+      key = "<S-C-Tab>";
       options.desc = "Neorg demote recursively";
       action = "<Plug>(neorg.promo.demote.nested)";
     }
@@ -251,13 +251,13 @@
     }
     {
       mode = "i";
-      key = "<C-t>";
+      key = "<C-Tab>";
       options.desc = "Neorg promote object recursively";
       action = "<Plug>(neorg.promo.promote)";
     }
     {
       mode = "i";
-      key = "<C-d>";
+      key = "<S-C-Tab>";
       options.desc = "Neorg demote object recursively";
       action = "<Plug>(neorg.promo.demote)";
     }
@@ -275,13 +275,13 @@
     }
     {
       mode = "v";
-      key = ">";
+      key = "<Tab>";
       options.desc = "Neorg promote range";
       action = "<Plug>(neorg.promo.promote.range)";
     }
     {
       mode = "v";
-      key = "<";
+      key = "<S-Tab>";
       options.desc = "Neorg demote range";
       action = "<Plug>(neorg.promo.demote.range)";
     }
