@@ -1,4 +1,10 @@
-{ config, lib, helpers,... }: {
+{ config, lib, ... }:
+let
+  inherit (lib.nixvim)
+    nestedLiteralLua
+  ;
+in
+{
   keymaps = lib.mkIf config.plugins.nvim-tree.enable [
     {
       mode = [
@@ -45,7 +51,7 @@
         highlight_git = true;
       };
       on_attach =
-        helpers.mkRaw # lua
+        nestedLiteralLua # lua
           ''
             						function(bufnr)
             							local api = require "nvim-tree.api"

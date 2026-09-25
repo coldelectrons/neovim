@@ -1,12 +1,21 @@
-{ lib, pkgs, helpers,... }:
+{ lib, pkgs, ... }:
 let
+  # thunk =
+  #   body:
+  #   helpers.mkRaw ''
+  #     function()
+  #       ${body}
+  #     end
+  #   '';
   thunk =
     body:
-    helpers.mkRaw ''
-      function()
-        ${body}
-      end
-    '';
+      { __raw =
+        ''
+          function()
+            ${body}
+          end
+        '';
+      };
 in
 {
   extraPackages = with pkgs; [
@@ -121,8 +130,7 @@ in
         }
         {
           key = "<leader>ld";
-          action =
-            helpers.mkRaw
+          action.__raw =
               # lua
               ''
                 require('telescope.builtin').lsp_definitions
@@ -134,8 +142,7 @@ in
         }
         {
           key = "<leader>lc";
-          action =
-            helpers.mkRaw
+          action.__raw =
               # lua
               ''
                 require('actions-preview').code_actions

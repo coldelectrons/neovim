@@ -1,7 +1,4 @@
-{ lib, helpers,... }:
-# let
-#   helpers = lib.nixvim;
-# in
+{ lib, ... }:
 {
   plugins = {
     luasnip.enable = true;
@@ -12,9 +9,7 @@
       cmdline =
         let
           search = {
-            mapping =
-              helpers.mkRaw # lua
-                "cmp.mapping.preset.cmdline()";
+            mapping.__raw = "cmp.mapping.preset.cmdline()";
             sources = [{ name = "buffer"; }];
           };
         in
@@ -22,9 +17,7 @@
           "/" = search;
           "?" = search;
           ":" = {
-            mapping =
-              helpers.mkRaw # lua
-                "cmp.mapping.preset.cmdline()";
+            mapping.__raw = "cmp.mapping.preset.cmdline()";
             sources = [{ name = "cmdline"; }];
           };
         };
@@ -39,8 +32,7 @@
           "<C-j>" = "cmp.mapping.scroll_docs(4)";
           "<C-k>" = "cmp.mapping.scroll_docs(-4)";
           "<C-l>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })";
-          "<C-n>" =
-            helpers.mkRaw # lua
+          "<C-n>".__raw =
               ''
                 function(fallback)
                   if cmp.visible() then
@@ -52,8 +44,7 @@
                   end
                 end
               '';
-          "<C-p>" =
-            helpers.mkRaw # lua
+          "<C-p>".__raw =
               ''
                 function(fallback)
                   if cmp.visible() then
